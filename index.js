@@ -10,6 +10,11 @@ app.get("/", (req, res) => {
   return res.render("home", { title: "My Contacts List" });
 });
 
+app.get("/practice", (req, res) => {
+  return res.render("practice", {
+    title: "Playing with ejs",
+  });
+});
 app.listen(port, (err) => {
   if (err) {
     console.log("Error: ", err);
