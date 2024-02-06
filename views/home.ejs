@@ -7,5 +7,13 @@
   </head>
   <body>
     <h1>Rendering from template engine!!!</h1>
+    <h3>Contacts List:</h3>
+    <ul>
+      <% contacts_list.forEach((contact) => { %>
+      <li>
+        <strong><%= contact.name %>: </strong><span><%= contact.number %></span>
+      </li>
+      <% }) %>
+    </ul>
   </body>
 </html>
