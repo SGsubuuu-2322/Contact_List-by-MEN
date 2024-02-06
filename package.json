@@ -1,0 +1,14 @@
+{
+  "name": "contact-list",
+  "version": "1.0.0",
+  "description": "A bacic contact list using node js, express js, and mongo db",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Subham Pradhan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
