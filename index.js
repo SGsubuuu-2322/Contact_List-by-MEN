@@ -72,15 +72,12 @@ app.post("/create-contact", (req, res) => {
 });
 
 app.get("/delete-contact/", (req, res) => {
-  const number = req.query.phoneNumber;
+  const id = req.query.id;
 
-  const contactIndex = contactList.findIndex(
-    (contact) => contact.number === +number
-  );
-
-  if (contactIndex !== -1) {
-    contactList.splice(contactIndex, 1);
-  }
+  const contactIndex = contact.findByIdAndDelete(id).catch((err) => {
+    console.log("There's some issue in deleting the contact");
+    return;
+  });
   return res.redirect("back");
 });
 
