@@ -39,11 +39,26 @@ app.get("/", (req, res) => {
 });
 
 app.post("/create-contact", (req, res) => {
-  contactList.push({
-    name: req.body.name,
-    number: req.body.number,
-  });
-  return res.redirect("/");
+  // contactList.push({
+  //   name: req.body.name,
+  //   number: req.body.number,
+  // });
+  contactList.push(req.body);
+  return res.redirect("back");
+});
+
+app.get("/delete-contact/", (req, res) => {
+  const number = req.query.phoneNumber;
+  console.log(number);
+
+  const contactIndex = contactList.findIndex(
+    (contact) => contact.number === +number
+  );
+
+  if (contactIndex !== -1) {
+    contactList.splice(contactIndex, 1);
+  }
+  return res.redirect("back");
 });
 
 app.get("/practice", (req, res) => {

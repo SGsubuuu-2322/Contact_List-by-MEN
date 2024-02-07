@@ -38,7 +38,13 @@ body {
   border-radius: 10px;
   color: #fff;
   display: flex;
+}
+
+.list li .details {
+  width: 90%;
+  display: flex;
   justify-content: space-between;
+  margin-right: 4px;
 }
 
 .list li:hover {
@@ -51,6 +57,22 @@ body {
 }
 .list li span {
   font-size: 20px;
+}
+
+.list li .delete-btn a {
+  text-decoration: none;
+  color: #111;
+}
+
+.delete-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+.list li:hover > .delete-btn a,
+.delete-btn a:hover {
+  cursor: pointer;
+  color: #fff;
 }
 
 .form input {

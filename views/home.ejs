@@ -20,7 +20,15 @@
     <ul class="list">
       <% contacts_list.forEach((contact) => { %>
       <li>
-        <strong><%= contact.name %> </strong><span><%= contact.number %></span>
+        <div class="details">
+          <strong><%= contact.name %> </strong
+          ><span><%= contact.number %></span>
+        </div>
+        <button class="delete-btn">
+          <a href="/delete-contact/?phoneNumber=<%= contact.number %>"
+            ><i class="fa-solid fa-square-xmark"></i
+          ></a>
+        </button>
       </li>
       <% }) %>
     </ul>
