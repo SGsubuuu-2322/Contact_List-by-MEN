@@ -35,10 +35,18 @@ let contactList = [
 ];
 
 app.get("/", (req, res) => {
-  return res.render("home", {
-    title: "My Contacts List",
-    contacts_list: contactList,
-  });
+  contact
+    .find({})
+    .then((contacts) => {
+      return res.render("home", {
+        title: "My Contacts List",
+        contacts_list: contacts,
+      });
+    })
+    .catch((err) => {
+      console.log("There's some issue in fetching your contacts...");
+      return;
+    });
 });
 
 app.post("/create-contact", (req, res) => {
