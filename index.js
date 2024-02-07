@@ -5,6 +5,8 @@ const port = 8000;
 const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded());
+app.use(express.static("assets"));
 
 let contactList = [
   {
@@ -37,7 +39,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/create-contact", (req, res) => {
-  return res.redirect("/practice");
+  contactList.push({
+    name: req.body.name,
+    number: req.body.number,
+  });
+  return res.redirect("/");
 });
 
 app.get("/practice", (req, res) => {
