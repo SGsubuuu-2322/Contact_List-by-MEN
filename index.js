@@ -49,7 +49,6 @@ app.post("/create-contact", (req, res) => {
 
 app.get("/delete-contact/", (req, res) => {
   const number = req.query.phoneNumber;
-  console.log(number);
 
   const contactIndex = contactList.findIndex(
     (contact) => contact.number === +number

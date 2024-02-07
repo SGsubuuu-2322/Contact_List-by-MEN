@@ -21,23 +21,36 @@ body {
 .list {
   list-style-type: none;
   height: 36vh;
+  width: 360px;
+  margin: 20px auto;
+  padding: 0;
   overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
   /* border: 2px solid red; */
+}
+
+.list::-webkit-scrollbar {
+  display: none;
 }
 
 .list li {
   /* height: 30px; */
   width: 350px;
   padding: 10px 20px;
-  margin-bottom: 4px;
+  margin: 0 0 4px 0;
   background-color: deepskyblue;
   border-radius: 10px;
   color: #fff;
   display: flex;
+}
+
+.list li:nth-child(1) {
+  margin-top: 5px;
 }
 
 .list li .details {
