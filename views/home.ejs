@@ -3,21 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="/css/home.css" />
     <title><%= title %></title>
   </head>
   <body>
-    <h1>Rendering from template engine!!!</h1>
-    <h3>Contacts List:</h3>
-    <ul>
+    <h1 class="heading">
+      <i class="fa-solid fa-address-book"></i> My Contacts List
+    </h1>
+    <ul class="list">
       <% contacts_list.forEach((contact) => { %>
       <li>
-        <strong><%= contact.name %>: </strong><span><%= contact.number %></span>
+        <strong><%= contact.name %> </strong><span><%= contact.number %></span>
       </li>
       <% }) %>
     </ul>
 
-    <form action="/create-contact" method="post">
+    <form class="form" action="/create-contact" method="post">
       <input type="text" name="name" placeholder="Enter the name..." required />
       <input
         type="number"
