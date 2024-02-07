@@ -15,5 +15,16 @@
       </li>
       <% }) %>
     </ul>
+
+    <form action="/create-contact" method="post">
+      <input type="text" name="name" placeholder="Enter the name..." required />
+      <input
+        type="number"
+        name="number"
+        placeholder="Enter the phone number..."
+        required
+      />
+      <button type="submit">Add Contact</button>
+    </form>
   </body>
 </html>

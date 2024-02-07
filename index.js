@@ -36,6 +36,10 @@ app.get("/", (req, res) => {
   });
 });
 
+app.post("/create-contact", (req, res) => {
+  return res.redirect("/practice");
+});
+
 app.get("/practice", (req, res) => {
   return res.render("practice", {
     title: "Playing with ejs",
