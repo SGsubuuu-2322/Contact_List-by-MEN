@@ -11,28 +11,28 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded());
 app.use(express.static("assets"));
 
-let contactList = [
-  {
-    name: "Subham",
-    number: 123456,
-  },
-  {
-    name: "Papa",
-    number: 654321,
-  },
-  {
-    name: "Mee",
-    number: 67890,
-  },
-  {
-    name: "Mama",
-    number: 9876,
-  },
-  {
-    name: "gelhi",
-    number: 34567,
-  },
-];
+// let contactList = [
+//   {
+//     name: "Subham",
+//     number: 123456,
+//   },
+//   {
+//     name: "Papa",
+//     number: 654321,
+//   },
+//   {
+//     name: "Mee",
+//     number: 67890,
+//   },
+//   {
+//     name: "Mama",
+//     number: 9876,
+//   },
+//   {
+//     name: "gelhi",
+//     number: 34567,
+//   },
+// ];
 
 app.get("/", (req, res) => {
   contact
@@ -60,7 +60,7 @@ app.post("/create-contact", (req, res) => {
       number: req.body.number,
     })
     .then((newContact) => {
-      console.log("==========", newContact);
+      // console.log("==========", newContact);
       return res.redirect("back");
     })
     .catch((err) => {
