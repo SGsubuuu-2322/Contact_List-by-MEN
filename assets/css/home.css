@@ -1,3 +1,6 @@
+/* This is stylings for the home page with contact list created using CSS... */
+
+/* These are some general stylings  that apply to all elements on the page. */
 * {
   box-sizing: border-box;
 }
@@ -17,6 +20,8 @@ body {
 .heading i:hover {
   color: deepskyblue;
 }
+
+/* These stylings are for contact list container , which contains all contacts. */
 
 .list {
   list-style-type: none;
@@ -88,6 +93,7 @@ body {
   color: #fff;
 }
 
+/* These stylings are for create contact form... */
 .form input {
   border: none;
   border-bottom: 2px solid black;
