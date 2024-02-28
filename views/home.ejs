@@ -1,3 +1,4 @@
+<!-- This is EJS file used to create dynamic structure for web page with some dynamic details... -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,10 +15,14 @@
     <title><%= title %></title>
   </head>
   <body>
+    <!-- This is heading -->
     <h1 class="heading">
       <i class="fa-solid fa-address-book"></i> My Contacts List
     </h1>
+
+    <!-- This is for creating contact list... -->
     <ul class="list">
+      <!-- This is where you can use some js code in ejs code for creating dynamic contact list... -->
       <% contacts_list.forEach((contact) => { %>
       <li>
         <div class="details">
@@ -33,6 +38,7 @@
       <% }) %>
     </ul>
 
+    <!-- This is create new contact form... -->
     <form class="form" action="/create-contact" method="post">
       <input type="text" name="name" placeholder="Enter the name..." required />
       <input
@@ -44,6 +50,7 @@
       <button type="submit">Add Contact</button>
     </form>
 
+    <!-- This  is JavaScript link of this page... -->
     <script src="/js/home.js"></script>
   </body>
 </html>
